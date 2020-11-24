@@ -1,0 +1,213 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main {
+    transition: margin-left .5s;
+}
+
+.nav{
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.search_box{
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.search_box input[type="text"]{
+    width: 100%;
+    padding: 20px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.3);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+
+}
+
+.fa-search{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  color: #fff;
+  font-size: 25px;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+}
+:-ms-input-placeholder {
+  color: #fff;
+}
+
+.filter_box{
+    margin: 10rem;
+    width: 300px;
+    height: 500px;
+    border: 2px solid grey;
+    border-radius: 20px;
+    padding: 25px;
+    font-family: Sans-Serif;
+}
+.filter_box .head{
+    font-family: poppins;
+    color: #00bfd8;
+    font-size: 25px;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    text-decoration: none;
+}
+hr.class-1 {
+    background-color: #fff;
+    border-top: 2px solid #8c8b8b;
+    margin: 1rem;
+    width: 90%;
+    text-align: center;
+}
+.filter_box a{
+    font-family: Sans-Serif;
+    font-size: 20px;
+    margin: 1rem;
+    color: #444444;
+}
+.filter_box input[type="text"]{
+    width: 90%;
+    margin: 1rem;
+    padding: 10px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid #a1a1a1;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+}
+
+.filter_box input[type="number"] {
+    width: 90%;
+    margin: 1rem;
+    padding: 10px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid #a1a1a1;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+
+}
+.filter_box .btn-primary{
+    width: 90px;
+    margin: 1rem;
+}
+.job_card{
+    border: 2px solid black;
+    width: 800px;
+    height: 200px;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.category{
+    text-align: center;
+    font-size: 30px;
+    width: 500px;
+}
+
+.col-sm-1{
+    padding: 20px;
+    border: 1px solid black;
+    margin: 1rem;
+    border-radius: 20px;
+}
+
+
+.bounceIn {
+    font-size: 30px;
+    display: inline-block;
+	padding: 10px;
+	color: #00bfd8;
+	text-transform: uppercase;
+	position: relative;
+	font-weight: bold;
+
+	-webkit-animation: bounce 1.2s ease-out;
+	-moz-animation: bounce 800ms ease-out;
+	-o-animation: bounce 800ms ease-out;
+	animation: bounce 1.2s ease-out;
+}
+@keyframes bounce {
+    0% {
+  transform:translateY(-100%);
+  opacity: 0;
+}
+5% {
+    transform:translateY(-100%);
+    opacity: 0;
+}
+    15% {
+  transform:translateY(0);
+  padding-bottom: 5px;
+}
+    30% {
+  transform:translateY(-50%);
+}
+
+}
+
+.heart {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+    color: red;
+}
+.fa:hover {
+  color: darkblue;
+}
+

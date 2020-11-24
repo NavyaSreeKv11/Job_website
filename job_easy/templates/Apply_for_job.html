@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+   Apply for Job
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="{% static 'css/material-dashboard.css' %}" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <!--<link href="../assets/demo/demo.css" rel="stylesheet" />-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+<style>
+    .image-preview-input {
+    position: relative;
+	overflow: hidden;
+	margin: 0px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.image-preview-input input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.image-preview-input-title {
+    margin-left:2px;
+}
+</style>
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../static/assets/img/dashboard_employer_imgs/sidebar.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+        <a href="" class="simple-text logo-normal text-primary">
+          JobEasy<i class="material-icons ">sentiment_satisfied_alt</i>
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <!--<li class="nav-item  ">-->
+            <!--<a class="nav-link" href="./dashboard.html">-->
+              <!--<i class="material-icons">dashboard</i>-->
+              <!--<p>Dashboard</p>-->
+            <!--</a>-->
+          <!--</li>-->
+          <li class="nav-item  ">
+            <a class="nav-link" href="http://127.0.0.1:8000/employee_profile/">
+              <i class="material-icons">person</i>
+              <p>My Profile</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://127.0.0.1:8000/employee_history_jobs/">
+              <i class="material-icons">history</i>
+              <p>History</p>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/employee/job_applied/">
+              <i class="material-icons">library_books</i>
+              <p>Applied Jobs</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://127.0.0.1:8000/saved_jobs/">
+              <i class="material-icons">loyalty</i>
+              <p>Saved pages</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="http://127.0.0.1:8000/search/">
+              <i class="material-icons">search</i>
+              <p>Search Page</p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+       <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="#pablo">Apply for Job</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <!--<form class="navbar-form">-->
+              <!--<div class="input-group no-border">-->
+                <!--<input type="text" value="" class="form-control" placeholder="Search...">-->
+                <!--<button type="submit" class="btn btn-white btn-round btn-just-icon">-->
+                  <!--<i class="material-icons">search</i>-->
+                  <!--<div class="ripple-container"></div>-->
+                <!--</button>-->
+              <!--</div>-->
+            <!--</form>-->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">
+                  <i class="material-icons">home</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#pablo">
+                  <i class="material-icons">power_settings_new</i>
+                  <p class="d-lg-none d-md-block">
+                    logOut
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h3 class="card-title">Apply for Job</h3>
+              <p class="card-category">Please fill the details carefully while applying.<br>Jobeasy does not guarantee that you will be selected for this post.
+              </p>
+            </div>
+            <div class="card-body">
+               <form method="POST" enctype="multipart/form-data" action="http://127.0.0.1:8000/employee/job_applied/?job_ID={{ data.job_ID }}" >
+{% csrf_token %}
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            <h6>Upload resume</h6>
+                            <div class="custom-file mb-3">
+                              <input type="file" class="custom-file-input" id="customFile" name="filename" accept="application/pdf" aria-required="true" required="required" data-msg-required="Please select any photo">
+                              <label class="custom-file-label" for="customFile">Upload .pdf file only</label>
+                            </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <i class="material-icons prefix">scatter_plot</i>
+                            <label>Other details</label>
+                          <div class="form-group">
+                            <label class="bmd-label-floating">example:I am interested in this job because..</label>
+                            <textarea class="form-control" name="details_and_instructions" rows="5"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="form-group">
+                        <div class="input-group mb-3">
+                              <input type="checkbox" checked disabled>
+                            {% for d in data %}
+                              <label>Accept to the T&C which state {{ d.job_terms_and_conditions }}</label>
+                            {% endfor %}
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-round float-right">Post</button>
+
+                    <!--<button type="submit" class="btn btn-primary pull-right">Post</button>-->
+
+                  </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <footer class="footer ">
+        <div class="container-fluid">
+          <nav class="float-left">
+          </nav>
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+            <a href="https://www.creative-tim.com" target="_blank">JobEasy</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="../assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <!--<script src="../assets/demo/demo.js"></script>-->
+
+  <script>
+    $(document).ready(function() {
+      //init DateTimePickers
+      md.initFormExtendedDatetimepickers();
+    });
+
+    // $('.file-upload').file_upload();
+  </script>
+<script>
+    $(".custom-file-input").on("change", function() {
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+</script>
+</body>
+
+</html>

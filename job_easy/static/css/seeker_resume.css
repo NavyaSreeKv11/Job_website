@@ -1,0 +1,59 @@
+.container-fluid {
+    width: 100%;
+}
+.resume {
+    width: 1000px;
+    height: 1000px;
+    margin: auto;
+    padding: 50px 100px 50px 100px;
+    background-color: #fcf8e3d4;
+}
+.resume .col {
+    margin: 0;
+}
+.resume .resumeDiv .resume-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+
+
+.add-education-modal {
+    display: none;
+    position: absolute;left: 500px; top: 20px;
+    width: 500px; height: 300px;
+    background-color: white;
+}
+.add-education-modal .education-modal {
+    background-color: white;
+    text-align: center;
+}
+
+.add-education-modal .education-modal .header button {
+    font-size: 2rem;
+}
+.col input[type='text']{
+    width: 90%;
+    margin: 1rem;
+    padding: 10px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid #a1a1a1;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+}
+.col input[type='number']{
+    width: 90%;
+    margin: 1rem;
+    padding: 10px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid #a1a1a1;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+}
